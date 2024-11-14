@@ -13,7 +13,7 @@ pipeline {
         stage("Build & Push Image") {
             steps {
                 sh '''
-                    /mvnw quarkus:add-extension \
+                    ./mvnw quarkus:add-extension \
                     -Dextensions="container-image-jib"
                 '''
                 sh '''
